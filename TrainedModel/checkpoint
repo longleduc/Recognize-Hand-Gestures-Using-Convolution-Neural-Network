@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/long/HandGesture/TrainedModel/GestureRecogModel.tfl"
+all_model_checkpoint_paths: "/home/long/HandGesture/TrainedModel/GestureRecogModel.tfl"

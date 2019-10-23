@@ -13,9 +13,11 @@ import numpy as np
 from PIL import Image
 import cv2
 import imutils
+from pynput.mouse import Button, Controller
 
 # global variables
 bg = None
+mouse = Controller()
 
 #--------------------------------------------------
 # To find the running average over the background
@@ -71,7 +73,7 @@ def getPredictedClass():
     image = cv2.imread('Temp.png')
     gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     prediction = model.predict([gray_image.reshape(89, 100, 1)])
-    return np.argmax(prediction), (np.amax(prediction) / (prediction[0][0] + prediction[0][1] + prediction[0][2]))
+    return np.argmax(prediction), (np.amax(prediction) / (prediction[0][0] + prediction[0][1] + prediction[0][2] + prediction[0][3] + prediction[0][4]))
 
 #-----------------
 # Show the statistics
@@ -98,7 +100,7 @@ def showStatistics(predictedClass, confidence):
     1,
     (255, 255, 255),
     2)
-
+    
     cv2.putText(textImage,"Confidence : " + str(confidence * 100) + '%', 
     (30, 100), 
     cv2.FONT_HERSHEY_SIMPLEX, 

@@ -1,0 +1,5 @@
+#Recognizing hand
+https://github.com/Gogul09/gesture-recognition?fbclid=IwAR1vF4q62ZZHW-28KGVtR2lbFV_XjtQP3CdUkbTM0pWHKJdSTbW3kVyuSFA
+
+#Convolution Neural Network to train model 
+https://github.com/SparshaSaha/Hand-Gesture-Recognition-Using-Background-Elllimination-and-Convolution-Neural-Network
